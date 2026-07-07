@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Kinetix Sdn Bhd | Ventilation Solutions & Energy Efficiency</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandGreen: '#2E8B57',
+                        brandBlue: '#0A2540',
+                        brandLightGreen: '#4CAF50',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans sticky-footer">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 mb-4 sm:mb-0">
+                <!-- Placeholder for Logo -->
+                <div class="text-2xl font-bold tracking-tight text-brandBlue">
+                    <span class="text-brandLightGreen">Green</span> Kinetix <span class="text-xs font-normal block text-gray-500">Sdn Bhd</span>
+                </div>
+            </div>
+            <nav class="flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#about" class="hover:text-brandLightGreen transition">About</a>
+                <a href="#services" class="hover:text-brandLightGreen transition">Services</a>
+                <a href="#contact" class="hover:text-brandLightGreen transition">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-brandBlue to-slate-900 text-white py-20 px-4 text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="text-xs font-bold uppercase tracking-widest bg-brandLightGreen/20 text-brandLightGreen px-3 py-1 rounded-full">Ventilation Solutions • Energy Efficiency • Sustainable Future</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold mt-6 mb-4 tracking-tight">Optimizing Airflow, Powering Sustainability</h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+                We deliver high-efficiency industrial ventilation engineering and fan maintenance solutions across Malaysia.
+            </p>
+            <a href="#contact" class="bg-brandLightGreen hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-md shadow-lg transition transform hover:-translate-y-0.5 inline-block">
+                Get In Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <section id="services" class="py-20 max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-brandBlue">Our Specialized Capabilities</h2>
+            <div class="w-16 h-1 bg-brandLightGreen mx-auto mt-3"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center text-brandLightGreen text-2xl mb-6">
+                    <i class="fa-solid fa-fan"></i>
+                </div>
+                <h3 class="text-xl font-bold text-brandBlue mb-3">EC Fan Retrofit</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Upgrading legacy systems with advanced, electronically commutated fan technology to drastically cut energy consumption.</p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center text-brandLightGreen text-2xl mb-6">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+                <h3 class="text-xl font-bold text-brandBlue mb-3">Fan Service & Maintenance</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Comprehensive testing, balancing, and preventive maintenance to maximize equipment reliability and lifecycle.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center text-brandLightGreen text-2xl mb-6">
+                    <i class="fa-solid fa-building-shield"></i>
+                </div>
+                <h3 class="text-xl font-bold text-brandBlue mb-3">Ventilation Engineering</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Custom-tailored airflow system designs meant to optimize workplace environments and regulatory compliance.</p>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center text-brandLightGreen text-2xl mb-6">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3 class="text-xl font-bold text-brandBlue mb-3">Energy Efficiency</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Actionable auditing and technical enhancements focused on lowering operational overhead and minimizing carbon impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Corporate Info -->
+    <section id="about" class="bg-gray-100 py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-brandBlue mb-4">About Green Kinetix</h2>
+            <p class="text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                Based in Kuala Lumpur and operational nationwide, Green Kinetix Sdn Bhd is an engineering-driven solutions provider. We bridge the gap between heavy industrial ventilation needs and modern green energy demands, assisting enterprises across Malaysia in future-proofing their ecosystems.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Details & Form Section -->
+    <section id="contact" class="py-20 max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+            
+            <!-- Contact Card Details -->
+            <div class="lg:col-span-2 bg-brandBlue text-white p-8 rounded-2xl shadow-xl">
+                <h3 class="text-2xl font-bold mb-2">Connect With Us</h3>
+                <p class="text-gray-400 text-sm mb-8">Reach out directly to find out how we can upgrade your facilities.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <i class="fa-solid fa-user-tie text-brandLightGreen mt-1 text-lg"></i>
+                        <div>
+                            <h4 class="font-semibold text-sm text-gray-400">Director</h4>
+                            <p class="text-base text-white font-medium">Ken Chin</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <i class="fa-solid fa-phone text-brandLightGreen mt-1 text-lg"></i>
+                        <div>
+                            <h4 class="font-semibold text-sm text-gray-400">Phone / WhatsApp</h4>
+                            <a href="tel:+60162922213" class="text-base text-white hover:text-brandLightGreen transition">+6016-292 2213</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <i class="fa-solid fa-envelope text-brandLightGreen mt-1 text-lg"></i>
+                        <div>
+                            <h4 class="font-semibold text-sm text-gray-400">Email</h4>
+                            <a href="mailto:sales@greenkinetixasia.com" class="text-base text-white hover:text-brandLightGreen transition">sales@greenkinetixasia.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <i class="fa-solid fa-location-dot text-brandLightGreen mt-1 text-lg"></i>
+                        <div>
+                            <h4 class="font-semibold text-sm text-gray-400">Location</h4>
+                            <p class="text-base text-gray-200">Kuala Lumpur, Malaysia <br><span class="text-xs text-brandLightGreen font-semibold">Operational Nationwide</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Inquiry Form -->
+            <div class="lg:col-span-3 bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                <h3 class="text-xl font-bold text-brandBlue mb-6">Send an Inquiry</h3>
+                <form action="#" method="POST" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Your Name</label>
+                            <input type="text" required class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-brandLightGreen">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Company Name</label>
+                            <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-brandLightGreen">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Email Address</label>
+                            <input type="email" required class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-brandLightGreen">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Phone Number</label>
+                            <input type="tel" class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-brandLightGreen">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Message / Requirements</label>
+                        <textarea rows="4" required class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-brandLightGreen placeholder-gray-400" placeholder="Describe your ventilation or maintenance needs..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-brandBlue hover:bg-slate-800 text-white text-sm font-semibold py-3 rounded transition shadow">
+                        Submit Request
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brandBlue text-gray-400 py-8 border-t border-slate-800 text-center text-xs">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <p>&copy; 2026 Green Kinetix Sdn Bhd. All rights reserved.</p>
+            <p class="tracking-wide">www.greenkinetixasia.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>
