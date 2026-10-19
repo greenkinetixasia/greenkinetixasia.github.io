@@ -5,11 +5,11 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18520098874"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  gtag('config', 'AW-18520098874');
+gtag('config', 'AW-18520098874');
 </script>
 
 <meta charset="UTF-8">
@@ -136,54 +136,69 @@ scroll-margin-top: 110px;
 
 
 <!-- ======================================================
-    HEADER
+   HEADER
 ====================================================== -->
 
 <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center">
 
-        <div class="flex items-center mb-4 md:mb-0">
-            <a href="index.html">
-                <img src="logo.png"
-                     alt="Green Kinetix Sdn Bhd Logo"
-                     class="h-28 md:h-32 w-auto object-contain">
-            </a>
-        </div>
-      
-    <!-- DESKTOP NAVIGATION -->
-     <nav class="hidden lg:flex items-center gap-6">
-            <a href="index.html" class="hover:text-brandLightGreen transition">Home</a>
-            <a href="index.html#services" class="hover:text-brandLightGreen transition">Services</a>
-            <a href="index.html#about" class="hover:text-brandLightGreen transition">About</a>
-            <a href="index.html#retrofit" class="hover:text-brandLightGreen transition">EC Fan Retrofit</a>
-            <a href="index.html#projects" class="hover:text-brandLightGreen transition">Projects</a>
-            <a href="cabinet-ec-fans.html" class="hover:text-brandLightGreen transition">Cabinet EC Fans</a>
-            <a href="index.html#contact" class="hover:text-brandLightGreen transition">Contact</a>
-        </nav>
+<div class="flex items-center mb-4 md:mb-0">
+<a href="index.html">
+<img src="logo.png"
+alt="Green Kinetix Sdn Bhd Logo"
+class="h-28 md:h-32 w-auto object-contain">
+</a>
+</div>
 
-    <!-- MOBILE MENU BUTTON -->
+<!-- DESKTOP NAVIGATION -->
+     <nav class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm font-medium text-gray-600">
+     <nav class="hidden lg:flex flex-wrap justify-center gap-4 lg:gap-8 text-sm font-medium text-gray-600">
+<a href="index.html" class="hover:text-brandLightGreen transition">Home</a>
+<a href="index.html#services" class="hover:text-brandLightGreen transition">Services</a>
+<a href="index.html#about" class="hover:text-brandLightGreen transition">About</a>
+<a href="index.html#retrofit" class="hover:text-brandLightGreen transition">EC Fan Retrofit</a>
+<a href="index.html#projects" class="hover:text-brandLightGreen transition">Projects</a>
+<a href="cabinet-ec-fans.html" class="hover:text-brandLightGreen transition">Cabinet EC Fans</a>
+<a href="index.html#contact" class="hover:text-brandLightGreen transition">Contact</a>
+</nav>
+
+<!-- MOBILE MENU BUTTON -->
+    <button
+      type="button"
+      class="lg:hidden text-brandBlue text-2xl"
+      aria-label="Toggle navigation"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+      onclick="const menu = document.getElementById('mobile-menu');
+               const open = menu.classList.toggle('hidden') === false;
+               this.setAttribute('aria-expanded', String(open));">
+      <i class="fa-solid fa-bars"></i>
+    </button>
    <button
-  id="mobileMenuButton"
-  type="button"
-  class="lg:hidden text-brandBlue text-2xl"
-  aria-label="Toggle menu"
-  aria-expanded="false"
-  aria-controls="mobileMenu">
-  <i class="fa-solid fa-bars"></i>
+    id="mobileMenuButton"
+    type="button"
+    class="lg:hidden text-brandBlue text-2xl p-2"
+    aria-label="Toggle navigation"
+    aria-controls="mobileMenu"
+    aria-expanded="false">
+
+    <i class="fa-solid fa-bars"></i>
+
 </button>
       
-  </div>
+</div>
 
-  <!-- MOBILE NAVIGATION -->
-  <nav id="mobileMenu" class="hidden lg:hidden">
+<!-- MOBILE NAVIGATION -->
+<nav id="mobileMenu"
+class="hidden lg:hidden bg-white px-6 py-4 space-y-4">
 
-  <a href="#home" class="mobile-link block">Home</a>
-  <a href="#services" class="mobile-link block">Services</a>
-  <a href="#about" class="mobile-link block">About</a>
-  <a href="#retrofit" class="mobile-link block">EC Fan Retrofit</a>
-  <a href="#projects" class="mobile-link block">Projects</a>
-  <a href="cabinet-ec-fans.html" class="mobile-link block">Cabinet EC Fans</a>
-  <a href="#contact" class="mobile-link block">Contact</a>
+<a href="#home" class="mobile-link block">Home</a>
+<a href="#services" class="mobile-link block">Services</a>
+<a href="#about" class="mobile-link block">About</a>
+<a href="#retrofit" class="mobile-link block">EC Fan Retrofit</a>
+<a href="#projects" class="mobile-link block">Projects</a>
+<a href="cabinet-ec-fans.html" class="mobile-link block">Cabinet EC Fans</a>
+<a href="#contact" class="mobile-link block">Contact</a>
 
 </nav>
 
@@ -191,29 +206,26 @@ scroll-margin-top: 110px;
 
 
 <!-- ======================================================
-    HERO
+   HERO
 ====================================================== -->
 
-<section id="home"
-         class="relative pt-8 pb-12
-                md:pt-20 md:pb-24">
+<section id="home" class="hero">
 
 <div class="hero-content max-w-7xl mx-auto px-6 w-full">
 
 <div class="max-w-4xl">
 
 <div class="inline-block bg-brandGreen text-white
-                       text-xs md:text-sm font-bold tracking-widest
-                       px-5 py-2 rounded-full mb-7">
+                      text-xs md:text-sm font-bold tracking-widest
+                      px-5 py-2 rounded-full mb-7">
 
 INDUSTRIAL FANS • EC FAN RETROFIT • VENTILATION ENGINEERING
 
 </div>
 
 
-<h1 class="text-4xl sm:text-5xl lg:text-7xl
-           font-extrabold text-brandBlue
-           leading-tight tracking-tight">
+<h1 class="text-5xl md:text-6xl lg:text-7xl
+                     leading-[1.05] font-extrabold text-brandBlue mb-6">
 
 Optimizing Airflow,<br>
 Powering Sustainability
@@ -221,9 +233,8 @@ Powering Sustainability
 </h1>
 
 
-<p class="text-base sm:text-lg lg:text-xl
-          leading-relaxed mt-4
-          max-w-2xl">
+<p class="text-xl md:text-2xl text-slate-600
+                    leading-relaxed max-w-xl mb-9">
 
 Engineering-driven industrial ventilation,
 EC fan retrofit, AHU optimisation and fan
@@ -231,14 +242,17 @@ maintenance solutions across Malaysia.
 
 </p>
 
+
 <a href="#contact"
-   class="inline-flex items-center justify-center
-          w-full sm:w-auto
-          px-7 py-3
-          bg-brandGreen text-white
-          font-bold rounded-lg">
-  Get In Touch
-  <i class="fa-solid fa-arrow-right ml-3"></i>
+class="inline-flex items-center gap-4
+                    bg-brandGreen hover:bg-green-700
+                    text-white text-lg font-bold
+                    px-9 py-4 rounded-lg shadow-lg transition">
+
+Get In Touch
+
+<i class="fa-solid fa-arrow-right"></i>
+
 </a>
 
 </div>
@@ -249,7 +263,7 @@ maintenance solutions across Malaysia.
 
 
 <!-- ======================================================
-    SERVICES
+   SERVICES
 ====================================================== -->
 
 <section id="services" class="pt-8 pb-12 bg-white scroll-mt-24">
@@ -280,38 +294,38 @@ reliability, energy efficiency and long-term equipment performance.
 
 <!-- EC FAN - CLICKABLE CARD -->
 <a href="#retrofit"
-   class="service-card block bg-gray-50 border border-gray-100
-          rounded-2xl p-8 no-underline text-inherit
-          hover:shadow-lg transition-all duration-300
-          cursor-pointer">
+class="service-card block bg-gray-50 border border-gray-100
+         rounded-2xl p-8 no-underline text-inherit
+         hover:shadow-lg transition-all duration-300
+         cursor-pointer">
 
-  <div class="w-14 h-14 bg-green-100 rounded-xl
-              flex items-center justify-center
-              text-brandGreen text-2xl mb-6">
+<div class="w-14 h-14 bg-green-100 rounded-xl
+             flex items-center justify-center
+             text-brandGreen text-2xl mb-6">
 
-    <i class="fa-solid fa-fan"></i>
+<i class="fa-solid fa-fan"></i>
 
-  </div>
+</div>
 
-  <h3 class="text-xl font-bold text-brandBlue mb-3">
-    EC Fan Retrofit
-  </h3>
+<h3 class="text-xl font-bold text-brandBlue mb-3">
+EC Fan Retrofit
+</h3>
 
-  <p class="text-gray-600 leading-relaxed">
-    Upgrade conventional AHU fan systems with
-    high-efficiency direct-drive EC plug fan technology.
-  </p>
+<p class="text-gray-600 leading-relaxed">
+Upgrade conventional AHU fan systems with
+high-efficiency direct-drive EC plug fan technology.
+</p>
 
 </a>
 
 
 <!-- MAINTENANCE -->
 <div class="service-card bg-gray-50 border border-gray-100
-                       rounded-2xl p-8">
+                      rounded-2xl p-8">
 
 <div class="w-14 h-14 bg-green-100 rounded-xl
-                           flex items-center justify-center
-                           text-brandGreen text-2xl mb-6">
+                          flex items-center justify-center
+                          text-brandGreen text-2xl mb-6">
 
 <i class="fa-solid fa-screwdriver-wrench"></i>
 
@@ -331,11 +345,11 @@ balancing and preventive maintenance services.
 
 <!-- VENTILATION -->
 <div class="service-card bg-gray-50 border border-gray-100
-                       rounded-2xl p-8">
+                      rounded-2xl p-8">
 
 <div class="w-14 h-14 bg-green-100 rounded-xl
-                           flex items-center justify-center
-                           text-brandGreen text-2xl mb-6">
+                          flex items-center justify-center
+                          text-brandGreen text-2xl mb-6">
 
 <i class="fa-solid fa-wind"></i>
 
@@ -355,33 +369,33 @@ airflow, static pressure and application requirements.
 
 <!-- ENERGY EFFICIENCY PRODUCTS - CLICKABLE CARD -->
 <a href="cabinet-ec-fans.html"
-   class="service-card block bg-gray-50 border border-gray-100
-          rounded-2xl p-8 no-underline text-inherit
-          hover:shadow-lg transition-all duration-300
-          cursor-pointer">
+class="service-card block bg-gray-50 border border-gray-100
+         rounded-2xl p-8 no-underline text-inherit
+         hover:shadow-lg transition-all duration-300
+         cursor-pointer">
 
-  <div class="w-14 h-14 bg-green-100 rounded-xl
-              flex items-center justify-center
-              text-brandGreen text-2xl mb-6">
+<div class="w-14 h-14 bg-green-100 rounded-xl
+             flex items-center justify-center
+             text-brandGreen text-2xl mb-6">
 
-    <i class="fa-solid fa-chart-line"></i>
+<i class="fa-solid fa-chart-line"></i>
 
-  </div>
+</div>
 
-  <h3 class="text-xl font-bold text-brandBlue mb-3">
-    Energy Efficiency Products
-  </h3>
+<h3 class="text-xl font-bold text-brandBlue mb-3">
+Energy Efficiency Products
+</h3>
 
-  <p class="text-gray-600 leading-relaxed">
-    Energy-saving EC fans, high-efficiency motors
-    and intelligent control solutions to reduce
-    power consumption and operating costs.
-  </p>
+<p class="text-gray-600 leading-relaxed">
+Energy-saving EC fans, high-efficiency motors
+and intelligent control solutions to reduce
+power consumption and operating costs.
+</p>
 
-  <div class="mt-5 text-brandGreen font-semibold text-sm">
-    Explore Cabinet EC Fans
-    <i class="fa-solid fa-arrow-right ml-2"></i>
-  </div>
+<div class="mt-5 text-brandGreen font-semibold text-sm">
+Explore Cabinet EC Fans
+<i class="fa-solid fa-arrow-right ml-2"></i>
+</div>
 
 </a>
 
@@ -395,147 +409,147 @@ airflow, static pressure and application requirements.
 
 
 <!-- ======================================================
-    ABOUT
+   ABOUT
 ====================================================== -->
 
 <section id="about"
-         class="pt-8 pb-12 bg-gray-50 scroll-mt-24">
+class="pt-8 pb-12 bg-gray-50 scroll-mt-24">
 
-  <div class="container mx-auto px-6">
+<div class="container mx-auto px-6">
 
-    <!-- COMPANY INTRODUCTION -->
-    <div class="max-w-4xl mx-auto text-center">
+<!-- COMPANY INTRODUCTION -->
+<div class="max-w-4xl mx-auto text-center">
 
-      <p class="text-brandGreen font-bold
-                tracking-widest uppercase text-sm mb-4">
-        About Green Kinetix
-      </p>
+<p class="text-brandGreen font-bold
+               tracking-widest uppercase text-sm mb-4">
+About Green Kinetix
+</p>
 
-      <h2 class="text-3xl md:text-4xl font-bold
-                 text-brandBlue mb-4">
-        Engineering Better Airflow
-      </h2>
+<h2 class="text-3xl md:text-4xl font-bold
+                text-brandBlue mb-4">
+Engineering Better Airflow
+</h2>
 
-      <p class="text-gray-600 text-lg
-                leading-relaxed mb-3">
-        Green Kinetix Sdn Bhd is an engineering-driven
-        solutions provider specialising in industrial
-        fans, ventilation engineering, AHU optimisation,
-        EC fan retrofit and fan maintenance solutions.
-      </p>
+<p class="text-gray-600 text-lg
+               leading-relaxed mb-3">
+Green Kinetix Sdn Bhd is an engineering-driven
+solutions provider specialising in industrial
+fans, ventilation engineering, AHU optimisation,
+EC fan retrofit and fan maintenance solutions.
+</p>
 
-      <p class="text-gray-600 text-lg
-                leading-relaxed">
-        Based in Kuala Lumpur and supporting projects
-        throughout Malaysia, we work with commercial,
-        industrial and mission-critical facilities
-        to improve airflow, system reliability
-        and energy performance.
-      </p>
+<p class="text-gray-600 text-lg
+               leading-relaxed">
+Based in Kuala Lumpur and supporting projects
+throughout Malaysia, we work with commercial,
+industrial and mission-critical facilities
+to improve airflow, system reliability
+and energy performance.
+</p>
 
-    </div>
+</div>
 
 
 <!-- LEADERSHIP & INDUSTRY EXPERIENCE -->
 <div class="max-w-5xl mx-auto mt-8">
 
-  <div class="bg-white border border-gray-100
-              rounded-2xl shadow-sm p-8 md:p-10">
+<div class="bg-white border border-gray-100
+             rounded-2xl shadow-sm p-8 md:p-10">
 
-    <div class="grid grid-cols-1 md:grid-cols-5
-                gap-8 items-center">
+<div class="grid grid-cols-1 md:grid-cols-5
+               gap-8 items-center">
 
-      <!-- LEFT: EVENT PHOTO -->
-      <div class="md:col-span-2">
+<!-- LEFT: EVENT PHOTO -->
+<div class="md:col-span-2">
 
-        <img
-          src="ken-chin-regal-rexnord-2026.jpg"
-          alt="Ken Chin presenting COPRA EC Plug Fan Array
-               technology at the 2026 Regal Rexnord
-               APAC Partner Meeting"
-          class="w-full h-auto rounded-xl
-                 shadow-md"
-          loading="lazy"
-        >
+<img
+src="ken-chin-regal-rexnord-2026.jpg"
+alt="Ken Chin presenting COPRA EC Plug Fan Array
+              technology at the 2026 Regal Rexnord
+              APAC Partner Meeting"
+class="w-full h-auto rounded-xl
+                shadow-md"
+loading="lazy"
+>
 
-        <p class="text-xs text-gray-500
-                  text-center mt-3 leading-relaxed">
-          Technical presentation on COPRA EC Plug Fan
-          Array technology at the 2026 Regal Rexnord
-          APAC Partner Meeting.
-        </p>
+<p class="text-xs text-gray-500
+                 text-center mt-3 leading-relaxed">
+Technical presentation on COPRA EC Plug Fan
+Array technology at the 2026 Regal Rexnord
+APAC Partner Meeting.
+</p>
 
-        <div class="text-center mt-5">
-          <span class="text-3xl font-bold text-brandBlue">
-            15+
-          </span>
-          <p class="text-brandGreen font-semibold text-sm">
-            Years of HVAC Industry Experience
-          </p>
-        </div>
+<div class="text-center mt-5">
+<span class="text-3xl font-bold text-brandBlue">
+15+
+</span>
+<p class="text-brandGreen font-semibold text-sm">
+Years of HVAC Industry Experience
+</p>
+</div>
 
-      </div>
+</div>
 
-      <!-- RIGHT: DIRECTOR PROFILE -->
-      <div class="md:col-span-3">
+<!-- RIGHT: DIRECTOR PROFILE -->
+<div class="md:col-span-3">
 
-        <p class="text-brandGreen font-bold
-                  uppercase tracking-widest
-                  text-sm mb-3">
-          Leadership & Industry Experience
-        </p>
+<p class="text-brandGreen font-bold
+                 uppercase tracking-widest
+                 text-sm mb-3">
+Leadership & Industry Experience
+</p>
 
-        <h3 class="text-3xl font-bold
-                   text-brandBlue mb-2">
-          Ken Chin
-        </h3>
+<h3 class="text-3xl font-bold
+                  text-brandBlue mb-2">
+Ken Chin
+</h3>
 
-        <p class="text-brandGreen font-semibold mb-5">
-          Director | Green Kinetix Sdn Bhd
-        </p>
+<p class="text-brandGreen font-semibold mb-5">
+Director | Green Kinetix Sdn Bhd
+</p>
 
-        <p class="text-gray-600 leading-relaxed mb-5">
-          With 15 years of experience in the HVAC
-          industry, Ken Chin specialises in providing
-          fan and ventilation solutions for commercial
-          and industrial projects.
-        </p>
+<p class="text-gray-600 leading-relaxed mb-5">
+With 15 years of experience in the HVAC
+industry, Ken Chin specialises in providing
+fan and ventilation solutions for commercial
+and industrial projects.
+</p>
 
-        <p class="text-gray-600 leading-relaxed mb-5">
-          His experience covers industrial fan
-          applications, fan selection, ventilation
-          systems, AHU optimisation and energy-efficient
-          fan technologies.
-        </p>
+<p class="text-gray-600 leading-relaxed mb-5">
+His experience covers industrial fan
+applications, fan selection, ventilation
+systems, AHU optimisation and energy-efficient
+fan technologies.
+</p>
 
-        <p class="text-gray-600 leading-relaxed mb-7">
-          Through Green Kinetix, he focuses on
-          delivering practical engineering solutions
-          that meet project requirements and support
-          long-term system reliability.
-        </p>
+<p class="text-gray-600 leading-relaxed mb-7">
+Through Green Kinetix, he focuses on
+delivering practical engineering solutions
+that meet project requirements and support
+long-term system reliability.
+</p>
 
-        <!-- LINKEDIN PROFILE -->
-        <a
-          href="https://www.linkedin.com/in/ken-chin-83153834"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-3
-                 bg-[#0A66C2] text-white
-                 font-semibold px-6 py-3
-                 rounded-lg hover:opacity-90
-                 transition duration-300">
+<!-- LINKEDIN PROFILE -->
+<a
+href="https://www.linkedin.com/in/ken-chin-83153834"
+target="_blank"
+rel="noopener noreferrer"
+class="inline-flex items-center gap-3
+                bg-[#0A66C2] text-white
+                font-semibold px-6 py-3
+                rounded-lg hover:opacity-90
+                transition duration-300">
 
-          <i class="fa-brands fa-linkedin text-xl"></i>
-          Connect with Ken Chin on LinkedIn
+<i class="fa-brands fa-linkedin text-xl"></i>
+Connect with Ken Chin on LinkedIn
 
-        </a>
+</a>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </div>
 
@@ -543,7 +557,7 @@ airflow, static pressure and application requirements.
 
 
 <!-- ======================================================
-    EC FAN RETROFIT VIDEO
+   EC FAN RETROFIT VIDEO
 ====================================================== -->
 
 <section id="retrofit" class="pt-6 pb-12 bg-white scroll-mt-24">
@@ -598,9 +612,9 @@ Your browser does not support HTML5 video.
 
 <a href="#contact"
 class="inline-flex items-center gap-3 mt-9
-                 bg-brandGreen hover:bg-green-700
-                 text-white font-bold
-                 px-8 py-4 rounded-lg transition">
+                bg-brandGreen hover:bg-green-700
+                text-white font-bold
+                px-8 py-4 rounded-lg transition">
 
 Request an EC Fan Retrofit Assessment
 
@@ -614,59 +628,59 @@ Request an EC Fan Retrofit Assessment
 
 
 <!-- ======================================================
-    PROJECTS
+   PROJECTS
 ====================================================== -->
 
 <section id="projects" class="relative py-24 text-white bg-slate-900 bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: linear-gradient(rgba(10, 37, 64, 0.88), rgba(10, 37, 64, 0.92)), url('services-bg.jpg');">
-    <div class="max-w-6xl mx-auto px-4 relative z-10 text-center">
-        <span class="text-xs font-bold uppercase tracking-widest text-brandLightGreen bg-brandLightGreen/20 px-3 py-1 rounded-full border border-brandLightGreen/30">
-            PROJECT EXPERIENCE
-        </span>
-        <h2 class="text-3xl md:text-4xl font-extrabold mt-4 mb-2">Engineering Solutions in Action</h2>
-        <p class="text-gray-300 text-sm md:text-base max-w-2xl mx-auto mb-12">
-            Supporting commercial and industrial facilities with fan upgrades, AHU optimisation, and ventilation solutions.
-        </p>
+<div class="max-w-6xl mx-auto px-4 relative z-10 text-center">
+<span class="text-xs font-bold uppercase tracking-widest text-brandLightGreen bg-brandLightGreen/20 px-3 py-1 rounded-full border border-brandLightGreen/30">
+PROJECT EXPERIENCE
+</span>
+<h2 class="text-3xl md:text-4xl font-extrabold mt-4 mb-2">Engineering Solutions in Action</h2>
+<p class="text-gray-300 text-sm md:text-base max-w-2xl mx-auto mb-12">
+Supporting commercial and industrial facilities with fan upgrades, AHU optimisation, and ventilation solutions.
+</p>
 
-        <!-- Facility Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-            <!-- Commercial Buildings -->
-            <div class="bg-slate-800/80 backdrop-blur-sm border border-slate-700/60 p-8 rounded-2xl hover:border-brandLightGreen/50 transition">
-                <div class="w-12 h-12 bg-brandLightGreen/20 text-brandLightGreen rounded-xl flex items-center justify-center text-xl mb-6">
-                    <i class="fa-solid fa-city"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Commercial Buildings</h3>
-                <p class="text-gray-300 text-xs leading-relaxed">
-                    AHU fan upgrades and energy-efficiency retrofit solutions for commercial facilities.
-                </p>
-            </div>
+<!-- Facility Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+<!-- Commercial Buildings -->
+<div class="bg-slate-800/80 backdrop-blur-sm border border-slate-700/60 p-8 rounded-2xl hover:border-brandLightGreen/50 transition">
+<div class="w-12 h-12 bg-brandLightGreen/20 text-brandLightGreen rounded-xl flex items-center justify-center text-xl mb-6">
+<i class="fa-solid fa-city"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Commercial Buildings</h3>
+<p class="text-gray-300 text-xs leading-relaxed">
+AHU fan upgrades and energy-efficiency retrofit solutions for commercial facilities.
+</p>
+</div>
 
-            <!-- Industrial Facilities -->
-            <div class="bg-slate-800/80 backdrop-blur-sm border border-slate-700/60 p-8 rounded-2xl hover:border-brandLightGreen/50 transition">
-                <div class="w-12 h-12 bg-brandLightGreen/20 text-brandLightGreen rounded-xl flex items-center justify-center text-xl mb-6">
-                    <i class="fa-solid fa-industry"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Industrial Facilities</h3>
-                <p class="text-gray-300 text-xs leading-relaxed">
-                    Industrial ventilation, fan replacement, and maintenance solutions for production facilities.
-                </p>
-            </div>
+<!-- Industrial Facilities -->
+<div class="bg-slate-800/80 backdrop-blur-sm border border-slate-700/60 p-8 rounded-2xl hover:border-brandLightGreen/50 transition">
+<div class="w-12 h-12 bg-brandLightGreen/20 text-brandLightGreen rounded-xl flex items-center justify-center text-xl mb-6">
+<i class="fa-solid fa-industry"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Industrial Facilities</h3>
+<p class="text-gray-300 text-xs leading-relaxed">
+Industrial ventilation, fan replacement, and maintenance solutions for production facilities.
+</p>
+</div>
 
-            <!-- Critical Facilities -->
-            <div class="bg-slate-800/80 backdrop-blur-sm border border-slate-700/60 p-8 rounded-2xl hover:border-brandLightGreen/50 transition">
-                <div class="w-12 h-12 bg-brandLightGreen/20 text-brandLightGreen rounded-xl flex items-center justify-center text-xl mb-6">
-                    <i class="fa-solid fa-hospital"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Critical Facilities</h3>
-                <p class="text-gray-300 text-xs leading-relaxed">
-                    Engineered airflow solutions for healthcare, cleanroom, and other critical environments.
-                </p>
-            </div>
-        </div>
-    </div>
+<!-- Critical Facilities -->
+<div class="bg-slate-800/80 backdrop-blur-sm border border-slate-700/60 p-8 rounded-2xl hover:border-brandLightGreen/50 transition">
+<div class="w-12 h-12 bg-brandLightGreen/20 text-brandLightGreen rounded-xl flex items-center justify-center text-xl mb-6">
+<i class="fa-solid fa-hospital"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Critical Facilities</h3>
+<p class="text-gray-300 text-xs leading-relaxed">
+Engineered airflow solutions for healthcare, cleanroom, and other critical environments.
+</p>
+</div>
+</div>
+</div>
 </section>
 
 <!-- ======================================================
-    CONTACT
+   CONTACT
 ====================================================== -->
 
 <section id="contact"  class="pt-4 pb-12 bg-gray-50 scroll-mt-8">
@@ -766,112 +780,112 @@ Kuala Lumpur • Operational Nationwide
 <!-- ENQUIRY -->
 <div class="bg-white rounded-2xl shadow-lg p-9">
 
-  <h3 class="text-2xl font-bold text-brandBlue mb-6">
-    Send an Inquiry
-  </h3>
+<h3 class="text-2xl font-bold text-brandBlue mb-6">
+Send an Inquiry
+</h3>
 
-  <form
-    action="https://formspree.io/f/xjykapgj"
-    method="POST"
-    class="space-y-5">
+<form
+action="https://formspree.io/f/xjykapgj"
+method="POST"
+class="space-y-5">
 
-    <!-- Customer Name -->
-    <input
-      type="text"
-      name="name"
-      placeholder="Your Name"
-      required
-      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-brandGreen">
+<!-- Customer Name -->
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required
+class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-brandGreen">
 
-    <!-- Company -->
-    <input
-      type="text"
-      name="company"
-      placeholder="Company Name"
-      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-brandGreen">
+<!-- Company -->
+<input
+type="text"
+name="company"
+placeholder="Company Name"
+class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-brandGreen">
 
-    <!-- Email -->
-    <input
-      type="email"
-      name="email"
-      placeholder="Email Address"
-      required
-      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-brandGreen">
+<!-- Email -->
+<input
+type="email"
+name="email"
+placeholder="Email Address"
+required
+class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-brandGreen">
 
-    <!-- Phone -->
-    <input
-      type="tel"
-      name="phone"
-      placeholder="Phone Number"
-      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-brandGreen">
+<!-- Phone -->
+<input
+type="tel"
+name="phone"
+placeholder="Phone Number"
+class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-brandGreen">
 
-    <!-- Service Required -->
-    <select
-      name="service"
-      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-brandGreen">
+<!-- Service Required -->
+<select
+name="service"
+class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-brandGreen">
 
-      <option value="">Select Service Required</option>
-      <option value="EC Fan Retrofit">EC Fan Retrofit</option>
-      <option value="Industrial Fans">Industrial Fans</option>
-      <option value="AHU Maintenance">AHU Maintenance</option>
-      <option value="Fan Maintenance">Fan Maintenance</option>
-      <option value="Ventilation & Smoke Extraction Fan Engineering">Ventilation & Smoke Extraction Fan Engineering</option>
-      <option value="Jetfan & CFD Simulation">Jetfan & CFD Simulation</option>
-      <option value="Other">Other</option>
-    </select>
+<option value="">Select Service Required</option>
+<option value="EC Fan Retrofit">EC Fan Retrofit</option>
+<option value="Industrial Fans">Industrial Fans</option>
+<option value="AHU Maintenance">AHU Maintenance</option>
+<option value="Fan Maintenance">Fan Maintenance</option>
+<option value="Ventilation & Smoke Extraction Fan Engineering">Ventilation & Smoke Extraction Fan Engineering</option>
+<option value="Jetfan & CFD Simulation">Jetfan & CFD Simulation</option>
+<option value="Other">Other</option>
+</select>
 
-    <!-- Project Requirements -->
-    <textarea
-      name="message"
-      rows="5"
-      placeholder="Tell us about your project or requirements..."
-      required
-      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-brandGreen"></textarea>
+<!-- Project Requirements -->
+<textarea
+name="message"
+rows="5"
+placeholder="Tell us about your project or requirements..."
+required
+class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-brandGreen"></textarea>
 
-    <!-- Email Subject -->
-    <input
-      type="hidden"
-      name="_subject"
-      value="New Green Kinetix Website Enquiry">
+<!-- Email Subject -->
+<input
+type="hidden"
+name="_subject"
+value="New Green Kinetix Website Enquiry">
 
-    <!-- Submit Button -->
-    <button
-      type="submit"
-      class="w-full bg-brandGreen hover:bg-green-700 text-white font-bold py-4 rounded-lg transition">
-      Submit Inquiry
-    </button>
+<!-- Submit Button -->
+<button
+type="submit"
+class="w-full bg-brandGreen hover:bg-green-700 text-white font-bold py-4 rounded-lg transition">
+Submit Inquiry
+</button>
 
-  </form>
+</form>
 
 </div>
 
 
 <!-- ======================================================
-    FOOTER
+   FOOTER
 ====================================================== -->
 
 <footer class="w-full bg-brandBlue text-slate-300 py-6">
 
-  <div class="max-w-7xl mx-auto px-6
-              flex flex-col md:flex-row
-              justify-between items-center gap-4">
+<div class="max-w-7xl mx-auto px-6
+             flex flex-col md:flex-row
+             justify-between items-center gap-4">
 
-    <!-- COPYRIGHT -->
-    <p class="text-sm text-center md:text-left">
-      &copy; 2026 Green Kinetix Sdn Bhd.
-      All rights reserved.
-    </p>
+<!-- COPYRIGHT -->
+<p class="text-sm text-center md:text-left">
+&copy; 2026 Green Kinetix Sdn Bhd.
+All rights reserved.
+</p>
 
-    <!-- COMPANY SERVICES -->
-    <p class="text-sm text-center md:text-right">
-      Industrial Fans &bull; EC Fan Retrofit
-      &bull; Ventilation Engineering
-    </p>
+<!-- COMPANY SERVICES -->
+<p class="text-sm text-center md:text-right">
+Industrial Fans &bull; EC Fan Retrofit
+&bull; Ventilation Engineering
+</p>
 
-  </div>
+</div>
 
 </footer>
-  
+
 <script>
 const menuButton = document.getElementById('mobileMenuButton');
 const mobileMenu = document.getElementById('mobileMenu');
