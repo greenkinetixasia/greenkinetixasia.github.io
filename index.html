@@ -140,19 +140,18 @@ scroll-margin-top: 110px;
 ====================================================== -->
 
 <header class="bg-white shadow-sm sticky top-0 z-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 lg:py-4 flex flex-row justify-between items-center">
 
-<div class="flex items-center mb-4 md:mb-0">
+<div class="flex items-center mb-0">
 <a href="index.html">
 <img src="logo.png"
 alt="Green Kinetix Sdn Bhd Logo"
-class="h-28 md:h-32 w-auto object-contain">
+class="h-14 md:h-32 w-auto object-contain">
 </a>
 </div>
 
 <!-- DESKTOP NAVIGATION -->
-     <nav class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm font-medium text-gray-600">
-     <nav class="hidden lg:flex flex-wrap justify-center gap-4 lg:gap-8 text-sm font-medium text-gray-600">
+        <nav class="hidden lg:flex flex-wrap justify-center gap-4 lg:gap-8 text-sm font-medium text-gray-600">
 <a href="index.html" class="hover:text-brandLightGreen transition">Home</a>
 <a href="index.html#services" class="hover:text-brandLightGreen transition">Services</a>
 <a href="index.html#about" class="hover:text-brandLightGreen transition">About</a>
@@ -163,18 +162,7 @@ class="h-28 md:h-32 w-auto object-contain">
 </nav>
 
 <!-- MOBILE MENU BUTTON -->
-    <button
-      type="button"
-      class="lg:hidden text-brandBlue text-2xl"
-      aria-label="Toggle navigation"
-      aria-controls="mobile-menu"
-      aria-expanded="false"
-      onclick="const menu = document.getElementById('mobile-menu');
-               const open = menu.classList.toggle('hidden') === false;
-               this.setAttribute('aria-expanded', String(open));">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-   <button
+      <button
     id="mobileMenuButton"
     type="button"
     class="lg:hidden text-brandBlue text-2xl p-2"
