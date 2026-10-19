@@ -85,26 +85,69 @@ tailwind.config = {
 
 <!-- HEADER -->
 <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center">
 
-        <div class="flex items-center mb-4 md:mb-0">
-            <a href="index.html">
-                <img src="logo.png"
-                     alt="Green Kinetix Sdn Bhd Logo"
-                     class="h-28 md:h-32 w-auto object-contain">
-            </a>
-        </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
+              py-2 lg:py-4 flex flex-row lg:flex-col
+              justify-between items-center">
 
-        <nav class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm font-medium text-gray-600">
-            <a href="index.html" class="hover:text-brandLightGreen transition">Home</a>
-            <a href="index.html#services" class="hover:text-brandLightGreen transition">Services</a>
-            <a href="index.html#about" class="hover:text-brandLightGreen transition">About</a>
-            <a href="index.html#ec-retrofit" class="hover:text-brandLightGreen transition">EC Fan Retrofit</a>
-            <a href="index.html#projects" class="hover:text-brandLightGreen transition">Projects</a>
-            <a href="cabinet-ec-fans.html" class="text-brandLightGreen font-bold">Cabinet EC Fans</a>
-            <a href="index.html#contact" class="hover:text-brandLightGreen transition">Contact</a>
-        </nav>
+    <!-- COMPANY LOGO -->
+    <div class="flex items-center mb-0 lg:mb-4">
+      <a href="index.html">
+        <img src="logo.png"
+             alt="Green Kinetix Sdn Bhd Logo"
+             class="h-[68px] lg:h-32 w-auto object-contain">
+      </a>
     </div>
+
+    <!-- DESKTOP NAVIGATION -->
+    <nav class="hidden lg:flex flex-wrap justify-center
+                gap-4 lg:gap-8 text-sm font-medium text-gray-600">
+
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#retrofit">EC Fan Retrofit</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="cabinet-ec-fans.html"
+         class="text-brandGreen font-semibold">
+        Cabinet EC Fans
+      </a>
+      <a href="index.html#contact">Contact</a>
+
+    </nav>
+
+    <!-- MOBILE HAMBURGER -->
+    <button id="mobileMenuButton"
+            type="button"
+            class="lg:hidden text-brandBlue text-2xl p-2"
+            aria-label="Toggle navigation"
+            aria-controls="mobileMenu"
+            aria-expanded="false">
+
+      <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+  </div>
+
+  <!-- MOBILE NAVIGATION -->
+  <nav id="mobileMenu"
+       class="hidden lg:hidden bg-white px-6 py-4
+              space-y-4 border-t border-gray-100">
+
+    <a href="index.html" class="mobile-link block">Home</a>
+    <a href="index.html#services" class="mobile-link block">Services</a>
+    <a href="index.html#about" class="mobile-link block">About</a>
+    <a href="index.html#retrofit" class="mobile-link block">EC Fan Retrofit</a>
+    <a href="index.html#projects" class="mobile-link block">Projects</a>
+    <a href="cabinet-ec-fans.html"
+       class="mobile-link block text-brandGreen font-semibold">
+       Cabinet EC Fans
+    </a>
+    <a href="index.html#contact" class="mobile-link block">Contact</a>
+
+  </nav>
+
 </header>
 
 <!-- HERO -->
@@ -623,5 +666,45 @@ tailwind.config = {
     </div>
 </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const menuButton = document.getElementById('mobileMenuButton');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  if (!menuButton || !mobileMenu) return;
+
+  menuButton.addEventListener('click', function () {
+
+    mobileMenu.classList.toggle('hidden');
+
+    const isOpen = !mobileMenu.classList.contains('hidden');
+
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+
+    menuButton.innerHTML = isOpen
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-bars"></i>';
+
+  });
+
+  mobileLinks.forEach(function(link) {
+
+    link.addEventListener('click', function() {
+
+      mobileMenu.classList.add('hidden');
+
+      menuButton.setAttribute('aria-expanded', 'false');
+
+      menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+
+    });
+
+  });
+
+});
+</script>
+  
 </body>
 </html>
