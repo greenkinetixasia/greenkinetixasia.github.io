@@ -581,25 +581,27 @@ energy efficiency, controllability and system reliability.
 
 </p>
 
-
 <div class="video-wrapper">
 
 <video
-controls
-preload="metadata"
-playsinline
-poster="ahu-retrofit-copra-poster.jpg">
+  id="copraRetrofitVideo"
+  controls
+  muted
+  preload="metadata"
+  playsinline
+  poster="ahu-retrofit-copra-poster.jpg"
+  onmouseenter="if (window.matchMedia('(hover: hover)').matches) this.play().catch(() => {})"
+  onmouseleave="if (window.matchMedia('(hover: hover)').matches) this.pause()">
 
-<source
-src="ahu-retrofit-copra-ec-plug-fan.mp4"
-type="video/mp4">
+  <source
+    src="ahu-retrofit-copra-ec-plug-fan.mp4"
+    type="video/mp4">
 
-Your browser does not support HTML5 video.
+  Your browser does not support HTML5 video.
 
 </video>
 
 </div>
-
 
 <a href="#contact"
 class="inline-flex items-center gap-3 mt-9
